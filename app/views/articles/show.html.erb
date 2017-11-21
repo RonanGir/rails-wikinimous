@@ -1,0 +1,14 @@
+<h1><%= @article.title  %></h1>
+<p>
+  <strong>Created at : </strong><%= @article.created_at.strftime('%Y/%m/%d') %>
+  - <strong>Updated at : </strong><%= @article.updated_at.strftime('%Y/%m/%d') %>
+</p>
+<p><%= @article.content %></p>
+<%= link_to "Edit", articles_edit_path %> - <%= link_to "Delete", articles_path(@article),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+
+
+<p>
+<%= link_to "Back", articles_path %>
+</p>
